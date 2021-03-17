@@ -8,14 +8,10 @@ This is useful so you can attach a notification when the switch turns off (and t
 1. Buy a smart Switch to turn a device off/on, AND a smart kWh measuring device (Can be both at once like the 'WR01ZE' plug (zwave stick required))
 2. Add to Domoticz, and check both are working
 3. Go to Setup/Devices in Domoticz
-
-4a. Rename the switch 'Light/Switch - Switch' to the set 'SwitchName' (These are defined in the scipt 'Vbscript.lua' in the 'DEVICES' declaration)
-4b. Rename the meter with 'Usage - Electric in Watt' to the set 'MeterName'
-
-As the point of writing this, the SwitchName also need to be declaired in 'data' seperatly
-
-5. Redo the last 2 steps with different names if more than one device
-6. Add the code in Setup/More options/Events and then add(+) dzVents. just copy the text in 'Vbscript.lua' into the field
+4. Rename the switch 'Light/Switch - Switch' to the set 'SwitchName' (These are defined in the scipt 'Vbscript.lua' in the 'DEVICES' declaration) <ins>As the point of writing this, the SwitchName also need to be declaired in 'data' seperatly</ins>
+5. Rename the meter with 'Usage - Electric in Watt' to the set 'MeterName' 
+6. Redo the last 2 steps (with different names) for each device you wish to use
+7. Add the code in Setup/More options/Events and then add(+) dzVents. just copy the text in 'Vbscript.lua' into the field
 
 
 # Credits and links
