@@ -12,6 +12,7 @@ This is useful so you can attach a notification when the switch turns off (and t
 5. Rename the meter with 'Usage - Electric in Watt' to the set 'MeterName' 
 6. Redo the last 2 steps (with different names) for each device you wish to use
 7. Add the code in Setup/More options/Events and then add(+) dzVents. just copy the text in 'Vbscript.lua' into the field
+8. Optionally add a 'Switch off' notification, this can just be done in Domoticz on the given SwitchName
 
 
 # Credits and links
