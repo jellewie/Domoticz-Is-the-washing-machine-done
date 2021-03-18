@@ -17,5 +17,6 @@ This is useful so you can attach a notification when the switch turns off (and t
 
 # Credits and links
 Credits to the old Version 2.0 made by @felix63 https://www.domoticz.com/forum/viewtopic.php?t=23798
+Altough I am unsure of this is the origen, I would like to mention @nayrnet with https://github.com/nayrnet/domoticz-scripts
 
 Some info about the DzVents language used here https://www.domoticz.com/wiki/DzVents:_next_generation_Lua_scripting
