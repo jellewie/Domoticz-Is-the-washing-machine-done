@@ -21,6 +21,7 @@ Example notification config:
 
 # Credits and links
 Credits to the old Version 2.0 made by [@felix63](https://www.domoticz.com/forum/viewtopic.php?t=23798)
+
 Altough I am unsure of this is the origen, I would like to mention [@nayrnet](https://github.com/nayrnet/domoticz-scripts)
 
 And [here](https://www.domoticz.com/wiki/DzVents:_next_generation_Lua_scripting) is some more info about the DzVents language
