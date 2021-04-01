@@ -78,9 +78,9 @@ return {
 				return('Idle: '..Reason)
 			end
 			--Note: switch is not active
-			if Meter.WhActual > StandbyMaxWatt then										--Device is active 
+			if Meter.WhActual > StandbyMaxWatt and Meter.WhActual < 3840 then			--Device is active (and no reading error above 240V@16A)
 				Switch.switchOn()														--Turn the virtual switch on
-				return('Switching On: Act_Power>'..tostring(StandbyMaxWatt))
+				return('Switching On: Act_Power='..tostring(Meter.WhActual)..'>'..tostring(StandbyMaxWatt))
 			end
 			--Note: switch and machine are not active
 			if power_average > 0 then 													--Switch is off but average is not reset
