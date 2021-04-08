@@ -2,8 +2,7 @@
 --Code Tweaked by JelleWho https://github.com/jellewie/Domoticz-Is-the-washing-machine-done
 
 local DEVICES = {
---█Change the below values to EXACTLY match the names/numbers set in Domoticz as device Name/Idx
---(SwitchName and MeterName) can either the name '<exact name>' |or| number <Number>
+--█Change the below values to EXACTLY match the names/numbers set in Domoticz as device Name/Idx. (SwitchName and MeterName) can either the name '<exact name>' |or| number <Number>
 --Random    ,SwitchName  ,  MeterName        , TimeOut, StandbyMaxWatt
 	['a'] = {'Wasmachine', 'Wasmachine usage', 5      , 4},
 	['b'] = {'Wasdroger' , 'Wasdroger usage' , 5      , 1},
