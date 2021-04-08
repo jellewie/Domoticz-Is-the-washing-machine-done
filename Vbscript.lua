@@ -2,12 +2,13 @@
 --Code Tweaked by JelleWho https://github.com/jellewie/Domoticz-Is-the-washing-machine-done
 
 local DEVICES = {
---█Change the below values to EXACTLY match the names set in Domoticz as device names
+--█Change the below values to EXACTLY match the names/numbers set in Domoticz as device Name/Idx
+--(SwitchName and MeterName) can either the name '<exact name>' |or| number <Number>
 --Random    ,SwitchName  ,  MeterName        , TimeOut, StandbyMaxWatt
 	['a'] = {'Wasmachine', 'Wasmachine usage', 5      , 4},
 	['b'] = {'Wasdroger' , 'Wasdroger usage' , 5      , 1},
 	--['c'] = {'3D_Printer', '3D_Printer usage', 5      , 12},							--Another example
-	--Also add these names to "data = {" in the format of "['SwitchName'] = {history = true, maxMinutes = 10}," !
+--█Also add these names to "data = {" in the format of "['SwitchName'] = {history = true, maxMinutes = 10}," !
 }
 
 local LogDebugging = false																--Set to TRUE to receive more information in the log, this includes most values of each status check
@@ -45,6 +46,7 @@ return {
 				domoticz.log(' - Usage='..Meter.WhActual..', Treshold='..StandbyMaxWatt..', Average='..power_average)
 				domoticz.log(' - Last read='..Meter.lastUpdate.minutesAgo..', Timout after='..TimeOut..', Last switch update='..Switch.lastUpdate.minutesAgo)
 			end
+
 			domoticz.data[SwitchName].add(Meter.WhActual)
 			if (Switch.active) then
 				if Meter.WhActual > StandbyMaxWatt then									--Device is already on
@@ -67,7 +69,7 @@ return {
 						return('Off: '..Reason)
 					end
 				end
-			
+
 				if (Switch.lastUpdate.minutesAgo <= TimeOut) then
 					Reason = "Wait for Switch idle:"..tostring(TimeOut-Switch.lastUpdate.minutesAgo).."min"
 				elseif(Meter.WhActual > StandbyMaxWatt) then
@@ -89,7 +91,7 @@ return {
 			return('Off')																--Device is off
 		end
 
-		for i, machine in pairs(DEVICES) do 											--Loop thru all the devices
+		for i, machine in pairs(DEVICES) do 											--Loop through all the devices
 			checked = status(machine)													--Check the status of each device
 			if LogChecking then domoticz.log('Status of '..machine[1]..'='..checked) end--Log the status of each device
 		end
