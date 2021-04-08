@@ -1,5 +1,5 @@
 --"Is the washing machine done?"
---Code Tweaked by JelleWho https://github.com/jellewie/Domoticz-Is-the-washing-macgine-done--
+--Code Tweaked by JelleWho https://github.com/jellewie/Domoticz-Is-the-washing-machine-done
 
 local DEVICES = {
 --█Change the below values to EXACTLY match the names set in Domoticz as device names
